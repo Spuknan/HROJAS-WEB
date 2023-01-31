@@ -1,0 +1,345 @@
+/* CLASSES FOR COLORS */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Varela+Round:wght@200;300;400;500;600;700;800;900&display=swap");
+.bg-primary {
+  background: rgb(40, 45, 54);
+}
+
+.bg-secondary {
+  background: rgb(33, 36, 41);
+}
+
+.bg-terciary {
+  background: rgb(22, 24, 31);
+}
+
+.bg-accent {
+  background: #9870fd;
+}
+
+.bg-white {
+  background: #f8f8f8;
+}
+
+.txt-primary {
+  color: rgb(40, 45, 54);
+}
+
+.txt-secondary {
+  color: rgb(33, 36, 41);
+}
+
+.txt-terciary {
+  color: rgb(22, 24, 31);
+}
+
+.txt-accent {
+  color: #9870fd;
+}
+
+.txt-white {
+  color: #f8f8f8;
+}
+
+/* CLASSES FOR FONT FAMILY */
+.ff-title {
+  font-family: "Montserrat", sans-serif;
+}
+
+.ff-title-200 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+}
+
+.ff-title-300 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+.ff-title-400 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.ff-title-500 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.ff-title-600 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.ff-title-700 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.ff-title-800 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+}
+
+.ff-title-900 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+
+.ff-text {
+  font-family: "Varela Round", sans-serif;
+}
+
+.ff-text-200 {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 200;
+}
+
+.ff-text-300 {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 300;
+}
+
+.ff-text-400 {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+}
+
+.ff-text-500 {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 500;
+}
+
+.ff-text-600 {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 600;
+}
+
+.ff-text-700 {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 700;
+}
+
+.ff-text-800 {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 800;
+}
+
+.ff-text-900 {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  padding: 1rem;
+}
+
+.title-gradient {
+  text-align: center;
+  background: linear-gradient(30deg, #9870fd 20%, #743efc 50%, #9870fd 80%);
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: shine 3s linear infinite;
+          animation: shine 3s linear infinite;
+}
+@-webkit-keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+button.primary {
+  color: #f8f8f8;
+  padding: 3px 10px;
+  border-radius: 3px;
+  border: 2px solid #9870fd;
+  background: #9870fd;
+  box-shadow: 2px 2px 12px rgba(22, 24, 31, 0.3);
+  text-shadow: 2px 2px 6px #20026c;
+  transition: 0.3s ease;
+  font-weight: 600;
+}
+button.primary:hover {
+  background: #8d61fd;
+  border: 2px solid #8d61fd;
+  box-shadow: 5px 5px 5px rgba(22, 24, 31, 0.5);
+}
+
+@media (max-width: 767.98px) {
+  button.primary {
+    width: 100%;
+  }
+}
+.button-accent-outline {
+  border: 2px solid #9870fd;
+  border-radius: 3px;
+  background: none;
+  color: #f8f8f8;
+  font-family: "Varela Round", sans-serif;
+  padding: 4px 10px;
+  transition: 0.5s ease;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+}
+.button-accent-outline:hover {
+  background: #9870fd;
+}
+
+nav {
+  background: none;
+  height: 80px;
+  transition: 0.5s ease;
+}
+nav a {
+  color: #f8f8f8;
+}
+nav .container-fluid {
+  max-width: 1200px;
+  margin: auto;
+}
+nav .collapse {
+  display: flex;
+  justify-content: flex-end;
+}
+nav .navbar-brand {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+nav .navbar-brand p {
+  margin: 0;
+  padding: 0;
+}
+nav .navbar-brand img {
+  max-height: 35px;
+  transition: 0.3s ease;
+}
+nav .navbar-brand img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 5px rgba(248, 248, 248, 0.8));
+}
+
+.scrolled {
+  height: 50px;
+  background: rgba(22, 24, 31, 0.8);
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.scrolled a {
+  margin: 0;
+  padding: 0;
+}
+.scrolled img {
+  height: 25px;
+}
+.scrolled .navbar-brand {
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+.scrolled .navbar-toggler {
+  transform: scale(0.8);
+}
+
+@media (max-width: 991.98px) {
+  .collapse .nav-link {
+    width: 100vw;
+    text-align: center;
+  }
+  .collapsing .nav-link {
+    width: 100vw;
+    text-align: center;
+  }
+}
+@media (max-width: 300px) {
+  .navbar-brand p {
+    display: none;
+  }
+}
+#index main #hero {
+  width: 100%;
+  height: 100vh;
+  background: rgb(40, 45, 54);
+  display: flex;
+  align-items: center;
+  color: #f8f8f8;
+}
+#index main #toolbox {
+  padding: 5rem 0;
+  min-height: 50vh;
+  background: rgb(33, 36, 41);
+}
+#index main #toolbox .slides-container {
+  display: flex;
+  justify-content: center;
+}
+#index main #toolbox .slides-container .slick-track {
+  padding: 2rem 0;
+}
+#index main #toolbox .slides-container .slick-dots li button:before {
+  color: #f8f8f8;
+}
+#index main #toolbox .slides-container .slick-dots {
+  color: #f8f8f8;
+}
+#index main #toolbox .slides-container .slide {
+  transition: 0.3s ease;
+}
+#index main #toolbox .slides-container .slide .body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+  margin: 0;
+  padding: 0;
+  background: rgb(40, 45, 54);
+  border-radius: 3px 3px 0 0;
+}
+#index main #toolbox .slides-container .slide .body img {
+  height: 100px;
+}
+#index main #toolbox .slides-container .slide .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgb(22, 24, 31);
+  width: 150px;
+  padding: 0.5rem;
+  transition: 0.3s ease;
+  border-radius: 0 0 3px 3px;
+}
+#index main #toolbox .slides-container .slide:hover {
+  transform: scale(1.05);
+}
+#index main #toolbox .slides-container .slide:hover .footer {
+  background: #9870fd;
+}
+#index main #toolbox .botones-slideshow .active {
+  background: #9870fd;
+  box-shadow: 0 0 10px rgba(152, 112, 253, 0.5);
+  text-shadow: 0 0 10px #282d36;
+}/*# sourceMappingURL=main.css.map */

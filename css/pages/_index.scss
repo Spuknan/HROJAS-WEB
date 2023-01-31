@@ -1,0 +1,84 @@
+#index {
+   main {
+      #hero {
+         width: 100%;
+         height: 100vh;
+         background: $clr-primary;
+         display: flex;
+         align-items: center;
+         color: $clr-white;
+      }
+
+      #toolbox {
+         padding: 5rem 0;
+         min-height: 50vh;
+         background: $clr-secondary;
+
+
+         .slides-container {
+            display: flex;
+            justify-content: center;
+
+            .slick-track {
+               padding: 2rem 0;
+            }
+
+            .slick-dots li button:before {
+               color: $clr-white;
+            }
+
+            .slick-dots {
+               color: $clr-white;
+            }
+
+            .slide {
+               transition: 0.3s ease;
+
+               .body {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 150px;
+                  width: 150px;
+                  margin: 0;
+                  padding: 0;
+                  background: $clr-primary;
+                  border-radius: 3px 3px 0 0;
+
+                  img {
+                     height: 100px;
+                  }
+               }
+
+               .footer {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  text-align: center;
+                  background: $clr-terciary;
+                  width: 150px;
+                  padding: 0.5rem;
+                  transition: 0.3s ease;
+                  border-radius: 0 0 3px 3px;
+               }
+
+               &:hover {
+                  transform: scale(1.05);
+
+                  .footer {
+                     background: $clr-accent;
+
+                  }
+               }
+            }
+         }
+         .botones-slideshow {
+            .active {
+               background: $clr-accent;
+               box-shadow: 0 0 10px rgba($clr-accent, 0.5);
+               text-shadow: 0 0 10px rgba($clr-primary, 1);
+            }
+         }
+      }
+   }
+}

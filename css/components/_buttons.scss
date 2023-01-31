@@ -1,0 +1,43 @@
+button {
+   &.primary {
+      color: $clr-white;
+      padding: 3px 10px;
+      border-radius: 3px;
+      border: 2px solid $clr-accent;
+      background: $clr-accent;
+      box-shadow: 2px 2px 12px rgba($clr-terciary, 0.3);
+      text-shadow: 2px 2px 6px darken($clr-accent, 50);
+      transition: 0.3s ease;
+      font-weight: 600;
+
+      &:hover {
+         background: darken($clr-accent, 3);
+         border: 2px solid darken($clr-accent, 3);
+         box-shadow: 5px 5px 5px rgba($clr-terciary, 0.5);
+      }
+   }
+}
+
+@media (max-width: 767.98px) {
+   button {
+      &.primary {
+         width: 100%;
+      }
+   }
+}
+
+.button-accent-outline {
+   border: 2px solid $clr-accent;
+   border-radius: 3px;
+   background: none;
+   color: $clr-white;
+   font-family: $ff-text;
+   padding: 4px 10px;
+   transition: 0.5s ease;
+   font-weight: 400;
+   letter-spacing: 0.8px;
+
+   &:hover {
+      background: $clr-accent;
+   }
+}

@@ -1,0 +1,20 @@
+$clr-primary: rgb(40, 45, 54);
+$clr-secondary: rgb(33, 36, 41);
+$clr-terciary: rgb(22, 24, 31);
+$clr-accent: #9870fd;
+$clr-white: #f8f8f8;
+
+/* CLASSES FOR COLORS */
+//? Background color
+.bg-primary{background: $clr-primary;}
+.bg-secondary{background: $clr-secondary;}
+.bg-terciary{background: $clr-terciary;}
+.bg-accent{background: $clr-accent;}
+.bg-white{background: $clr-white;}
+
+//? Text color
+.txt-primary{color: $clr-primary;}
+.txt-secondary{color: $clr-secondary;}
+.txt-terciary{color: $clr-terciary;}
+.txt-accent{color: $clr-accent;}
+.txt-white{color: $clr-white;}
