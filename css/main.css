@@ -144,6 +144,7 @@ body::-webkit-scrollbar-thumb {
   .navbar {
     position: fixed;
     bottom: 0;
+    padding: 5px;
     height: 50px;
     width: 100%;
     z-index: 999;
@@ -158,6 +159,7 @@ body::-webkit-scrollbar-thumb {
     gap: 1rem;
     justify-content: center;
     padding: 0 1rem;
+    margin-top: 0;
   }
   .navbar .navbar-nav .nav-item {
     background: none;
@@ -432,7 +434,7 @@ body::-webkit-scrollbar-thumb {
   gap: 2rem;
 }
 #index #hardskills .cards-container .card {
-  width: 400px;
+  width: 450px;
   height: 200px;
   background: #1C1C1C;
   padding: 1rem;
@@ -530,6 +532,80 @@ body::-webkit-scrollbar-thumb {
   font-weight: 300;
   text-align: center;
 }
+#index #portfolio {
+  min-height: 100vh;
+  width: 100%;
+  margin: 2rem 0;
+}
+#index #portfolio .photo-row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+#index #portfolio .photo-row .photo {
+  position: relative;
+  width: 25%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#index #portfolio .photo-row .photo img {
+  display: block;
+  width: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.5s ease;
+}
+#index #portfolio .photo-row .photo img:hover {
+  transform: scale(1.2) rotate(-1deg);
+}
+#index #portfolio .photo-row .photo .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #F8F8F8;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+#index #portfolio .photo-row .photo .overlay h4 {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+}
+#index #portfolio .photo-row .photo .overlay p {
+  max-width: 80%;
+}
+#index #portfolio .photo-row .photo .overlay:hover {
+  opacity: 1;
+}
+#index #portfolio:before {
+  color: rgba(255, 255, 255, 0.15);
+  font-family: "La Belle Aurore", cursive;
+  position: relative;
+  font-weight: 500;
+  font-size: 1.2rem;
+  content: "<section>";
+  margin-left: 1rem;
+}
+#index #portfolio:after {
+  color: rgba(255, 255, 255, 0.15);
+  font-family: "La Belle Aurore", cursive;
+  position: relative;
+  font-weight: 500;
+  font-size: 1.2rem;
+  content: "</section>";
+  margin-left: 1rem;
+}
 
 @media (max-width: 767.98px) {
   main {
@@ -550,5 +626,11 @@ body::-webkit-scrollbar-thumb {
   }
   #hero .left p {
     font-size: 14px !important;
+  }
+  .photo-row .photo {
+    width: 50% !important;
+  }
+  .cards-container .card {
+    height: 100% !important;
   }
 }/*# sourceMappingURL=main.css.map */
