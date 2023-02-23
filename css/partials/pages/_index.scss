@@ -1,0 +1,337 @@
+#index {
+   main {
+      background: $clr-primary;
+      min-height: 100vh;
+      margin-left: 240px;
+      overflow: hidden;
+
+      .sk-html {
+         position: absolute;
+         margin: -1rem;
+
+         &:before {
+            @include sketch;
+            left: 2rem;
+            top: 1rem;
+            content: "<html>";
+         }
+      }
+
+      .sk-body {
+         position: absolute;
+
+         &:before {
+            @include sketch;
+            left: 2rem;
+            top: 1.5rem;
+            content: "<body>";
+         }
+      }
+   }
+
+   #hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem;
+
+
+      .left {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         width: 70%;
+         height: 100%;
+         color: $clr-white;
+
+         h1 {
+            font-size: 2.5rem;
+
+            #indexCurioso {
+               color: $clr-accent;
+               font-style: italic;
+            }
+         }
+
+         p {
+            color: rgba($clr-white, 0.7);
+            font-weight: 300;
+         }
+      }
+
+      .right {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         max-width: 50%;
+         height: 100%;
+         object-fit: contain;
+
+         img {
+            object-fit: contain;
+            max-width: 120%;
+            filter: drop-shadow(-20px -20px 10px rgba(0, 0, 0, 0.2));
+         }
+
+         @media (max-width: 991.98px) {
+            img {
+               display: none;
+            }
+         }
+      }
+   }
+
+
+   #about {
+      padding-left: 1rem;
+   
+      &:before {
+         @include sketch;
+         content: "<section>";
+      }
+   
+      &:after {
+         @include sketch;
+         content: "</section>";
+      }
+   
+      h2 {
+         font-size: 2rem;
+         font-weight: 700;
+         color: $clr-white;
+         position: relative;
+         top: 4.8rem;
+         left: 4rem;
+   
+         &:before {
+            @include sketch;
+            content: "<h2>";
+            padding: 0 5px;
+         }
+      
+         &:after {
+            @include sketch;
+            content: "</h2>";
+            padding: 0 5px;
+         }
+   
+         span {
+            color: $clr-accent;
+            font-style: italic;
+         }
+      }
+   
+      .card-bg {
+         background: $clr-dark;
+         width: 100%;
+         margin: 50px 0 50px 50px;
+   
+         .backtext {
+            font-size: 10rem;
+            position: relative;
+            font-weight: 900;
+            color: rgba($clr-white, 0.1);
+            top: -11rem;
+            right: 2rem;
+            display: block;
+            width: 100%;
+            text-align: right;
+         }
+   
+         .text {
+            color: $clr-white;
+            max-width: 60%;
+            margin-top: -14rem;
+            padding: 0 5rem 1rem 5rem;
+            font-weight: 300;
+         }
+      }
+   }
+
+   
+   #hardskills {
+      &:before {
+         @include sketch;
+         content: "<section>";
+         margin-left: 1rem;
+      }
+   
+      &:after {
+         @include sketch;
+         content: "</section>";
+         margin-left: 1rem;
+      }
+
+      .backtext {
+         font-size: 10rem;
+         position: relative;
+         font-weight: 900;
+         color: rgba($clr-white, 0.1);
+         right: 2rem;
+         display: block;
+         width: 100%;
+         text-align: right;
+         z-index: 1;
+      }
+
+      .cards-container {
+         margin-top: -10rem;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-around;
+         padding: 5rem;
+         gap: 2rem;
+
+         .card {
+            width: 400px;
+            height: 200px;
+            background: $clr-dark;
+            padding: 1rem;
+            z-index: 2;
+            box-shadow: 5px 5px 15px $clr-dark;
+
+            .type {
+               font-size: 0.8rem;
+            }
+
+            h4 {
+               font-weight: 600;
+               font-size: 24px;
+               color: #fff;
+            }
+
+            .description {
+               color: rgba($clr-white, 0.7);
+               font-weight: 300;
+            }
+         }
+
+         .frontend {
+            border-top: 2px solid $clr-accent-2;
+
+            .type {
+               color: $clr-accent-2;
+               line-height: 0.8rem;
+            }
+         }
+
+         .industrial {
+            border-top: 2px solid $clr-accent-3;
+
+            .type {
+               color: $clr-accent-3;
+               line-height: 0.8rem;
+            }
+         }
+
+         .general {
+            border-top: 2px solid $clr-accent;
+
+            .type {
+               color: $clr-accent;
+               line-height: 0.8rem;
+            }
+         }
+      }
+   }
+
+   #softskills {
+      &:before {
+         @include sketch;
+         content: "<section>";
+         margin-left: 1rem;
+      }
+   
+      &:after {
+         @include sketch;
+         content: "</section>";
+         margin-left: 1rem;
+      }
+
+      .backtext {
+         font-size: 10rem;
+         position: relative;
+         font-weight: 900;
+         color: rgba($clr-white, 0.1);
+         right: 2rem;
+         display: block;
+         width: 100%;
+         text-align: right;
+         z-index: 1;
+      }
+
+      .cards-container {
+         margin-top: -10rem;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-around;
+         padding: 5rem;
+         gap: 2rem;
+
+         .card {
+            width: 400px;
+            height: 200px;
+            background: $clr-dark;
+            padding: 1rem;
+            z-index: 2;
+            border-radius: 5%;
+            border-top: 2px solid $clr-accent-4;
+            box-shadow: 5px 5px 15px $clr-dark;
+
+            h4 {
+               font-weight: 600;
+               font-size: 24px;
+               color: #fff;
+               text-align: center;
+            }
+
+            .description {
+               color: rgba($clr-white, 0.7);
+               font-weight: 300;
+               text-align: center;
+            }
+         }
+      }
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 767.98px) {
+   main {
+      margin-left: 0px !important;
+      margin-bottom: 50px;
+   }
+
+   .pad-container {
+      max-width: 100%;
+   }
+
+   #hero {
+      padding: 0 !important;
+
+      .left {
+         width: 60% !important;
+
+         h1 {
+            font-size: 1.8rem !important;
+         }
+
+         p {
+            font-size: 14px !important;
+         }
+      }
+   }
+}

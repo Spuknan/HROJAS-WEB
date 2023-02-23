@@ -1,0 +1,554 @@
+@import url("https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, span {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #F8F8F8;
+}
+
+.pad-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+body::-webkit-scrollbar {
+  width: 0.35rem;
+  height: 0.35rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #435250;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgba(8, 253, 216, 0.3);
+}
+
+.navbar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #292E2D;
+  height: 100vh;
+  width: 240px;
+}
+.navbar .navbar-brand {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 1rem;
+}
+.navbar .navbar-brand .brand-text {
+  color: rgba(248, 248, 248, 0.7);
+  font-weight: 600;
+  font-size: 1.5rem;
+  width: 20px;
+  text-align: center;
+}
+.navbar .navbar-brand .brand-img {
+  height: 40px;
+  transition: 0.3s ease;
+}
+.navbar .navbar-brand .brand-img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  filter: drop-shadow(0 0 8px rgba(248, 248, 248, 0.4));
+}
+.navbar .navbar-nav {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 0 0 0 2rem;
+}
+.navbar .navbar-nav .nav-item {
+  width: 100%;
+  background: #435250;
+  border-radius: 5px 0 0 5px;
+  transition: background 0.2s ease;
+}
+.navbar .navbar-nav .nav-item:hover {
+  background: #5a6e6b;
+}
+.navbar .navbar-nav .nav-item:hover .nav-link {
+  color: #fff;
+}
+.navbar .navbar-nav .nav-item:active {
+  background: #536663;
+}
+.navbar .navbar-nav .nav-item.active {
+  border-bottom: 3px solid #08FDD8;
+}
+.navbar .navbar-nav .nav-item.active .nav-link {
+  color: #fff;
+}
+.navbar .navbar-nav .nav-item .nav-link {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  gap: 10px;
+  color: rgba(248, 248, 248, 0.8);
+  transition: color 0.3s ease;
+}
+.navbar .navbar-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.navbar .navbar-footer .footer-icons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.navbar .navbar-footer .footer-icons a {
+  transition: 0.3s ease;
+}
+.navbar .navbar-footer .footer-icons a:hover {
+  transform: scale(1.2);
+}
+.navbar .navbar-footer .btn-container {
+  width: 100%;
+  padding: 8px 16px;
+  text-align: center;
+  border: 2px solid #08FDD8;
+  border-radius: 5px;
+  color: #08FDD8;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+.navbar .navbar-footer .btn-container:hover {
+  background: #08FDD8;
+  color: #1C1C1C;
+}
+
+@media (max-width: 767.98px) {
+  .navbar {
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    z-index: 999;
+  }
+  .navbar .navbar-brand {
+    display: none;
+  }
+  .navbar .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    background: none;
+    gap: 1rem;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+  .navbar .navbar-nav .nav-item {
+    background: none;
+    border-radius: 5px;
+  }
+  .navbar .navbar-nav .nav-item.active {
+    border: none;
+  }
+  .navbar .navbar-nav .nav-item .link-text {
+    display: none;
+  }
+  .navbar .navbar-nav .nav-item .nav-link {
+    display: flex;
+    justify-content: center;
+  }
+  .navbar .navbar-footer {
+    display: none;
+  }
+}
+@media (min-width: 1px) {
+  .sk-h1 {
+    margin: -1rem;
+  }
+  .sk-h1:before {
+    color: rgba(255, 255, 255, 0.15);
+    font-family: "La Belle Aurore", cursive;
+    position: relative;
+    font-weight: 500;
+    font-size: 1.2rem;
+    left: -2rem;
+    top: 0.5rem;
+    content: "<h1>";
+  }
+  .sk-h1:after {
+    color: rgba(255, 255, 255, 0.15);
+    font-family: "La Belle Aurore", cursive;
+    position: relative;
+    font-weight: 500;
+    font-size: 1.2rem;
+    left: -2rem;
+    top: -0.5rem;
+    content: "</h1>";
+  }
+  .sk-h2:before {
+    color: rgba(255, 255, 255, 0.15);
+    font-family: "La Belle Aurore", cursive;
+    position: relative;
+    font-weight: 500;
+    font-size: 1.2rem;
+    left: -1rem;
+    content: "<h2>";
+  }
+  .sk-h2:after {
+    color: rgba(255, 255, 255, 0.15);
+    font-family: "La Belle Aurore", cursive;
+    position: relative;
+    font-weight: 500;
+    font-size: 1.2rem;
+    right: -1rem;
+    content: "</h2>";
+  }
+  .sk-p {
+    margin: -1rem;
+  }
+  .sk-p:before {
+    color: rgba(255, 255, 255, 0.15);
+    font-family: "La Belle Aurore", cursive;
+    position: relative;
+    font-weight: 500;
+    font-size: 1.2rem;
+    left: -2rem;
+    top: 0.8rem;
+    content: "<p>";
+  }
+  .sk-p:after {
+    color: rgba(255, 255, 255, 0.15);
+    font-family: "La Belle Aurore", cursive;
+    position: relative;
+    font-weight: 500;
+    font-size: 1.2rem;
+    left: -2rem;
+    top: -0.5rem;
+    content: "</p>";
+  }
+}
+#index main {
+  background: #272727;
+  min-height: 100vh;
+  margin-left: 240px;
+  overflow: hidden;
+}
+#index main .sk-html {
+  position: absolute;
+  margin: -1rem;
+}
+#index main .sk-html:before {
+  color: rgba(255, 255, 255, 0.15);
+  font-family: "La Belle Aurore", cursive;
+  position: relative;
+  font-weight: 500;
+  font-size: 1.2rem;
+  left: 2rem;
+  top: 1rem;
+  content: "<html>";
+}
+#index main .sk-body {
+  position: absolute;
+}
+#index main .sk-body:before {
+  color: rgba(255, 255, 255, 0.15);
+  font-family: "La Belle Aurore", cursive;
+  position: relative;
+  font-weight: 500;
+  font-size: 1.2rem;
+  left: 2rem;
+  top: 1.5rem;
+  content: "<body>";
+}
+#index #hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+}
+#index #hero .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+  height: 100%;
+  color: #F8F8F8;
+}
+#index #hero .left h1 {
+  font-size: 2.5rem;
+}
+#index #hero .left h1 #indexCurioso {
+  color: #08FDD8;
+  font-style: italic;
+}
+#index #hero .left p {
+  color: rgba(248, 248, 248, 0.7);
+  font-weight: 300;
+}
+#index #hero .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#index #hero .right img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 120%;
+  filter: drop-shadow(-20px -20px 10px rgba(0, 0, 0, 0.2));
+}
+@media (max-width: 991.98px) {
+  #index #hero .right img {
+    display: none;
+  }
+}
+#index #about {
+  padding-left: 1rem;
+}
+#index #about:before {
+  color: rgba(255, 255, 255, 0.15);
+  font-family: "La Belle Aurore", cursive;
+  position: relative;
+  font-weight: 500;
+  font-size: 1.2rem;
+  content: "<section>";
+}
+#index #about:after {
+  color: rgba(255, 255, 255, 0.15);
+  font-family: "La Belle Aurore", cursive;
+  position: relative;
+  font-weight: 500;
+  font-size: 1.2rem;
+  content: "</section>";
+}
+#index #about h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #F8F8F8;
+  position: relative;
+  top: 4.8rem;
+  left: 4rem;
+}
+#index #about h2:before {
+  color: rgba(255, 255, 255, 0.15);
+  font-family: "La Belle Aurore", cursive;
+  position: relative;
+  font-weight: 500;
+  font-size: 1.2rem;
+  content: "<h2>";
+  padding: 0 5px;
+}
+#index #about h2:after {
+  color: rgba(255, 255, 255, 0.15);
+  font-family: "La Belle Aurore", cursive;
+  position: relative;
+  font-weight: 500;
+  font-size: 1.2rem;
+  content: "</h2>";
+  padding: 0 5px;
+}
+#index #about h2 span {
+  color: #08FDD8;
+  font-style: italic;
+}
+#index #about .card-bg {
+  background: #1C1C1C;
+  width: 100%;
+  margin: 50px 0 50px 50px;
+}
+#index #about .card-bg .backtext {
+  font-size: 10rem;
+  position: relative;
+  font-weight: 900;
+  color: rgba(248, 248, 248, 0.1);
+  top: -11rem;
+  right: 2rem;
+  display: block;
+  width: 100%;
+  text-align: right;
+}
+#index #about .card-bg .text {
+  color: #F8F8F8;
+  max-width: 60%;
+  margin-top: -14rem;
+  padding: 0 5rem 1rem 5rem;
+  font-weight: 300;
+}
+#index #hardskills:before {
+  color: rgba(255, 255, 255, 0.15);
+  font-family: "La Belle Aurore", cursive;
+  position: relative;
+  font-weight: 500;
+  font-size: 1.2rem;
+  content: "<section>";
+  margin-left: 1rem;
+}
+#index #hardskills:after {
+  color: rgba(255, 255, 255, 0.15);
+  font-family: "La Belle Aurore", cursive;
+  position: relative;
+  font-weight: 500;
+  font-size: 1.2rem;
+  content: "</section>";
+  margin-left: 1rem;
+}
+#index #hardskills .backtext {
+  font-size: 10rem;
+  position: relative;
+  font-weight: 900;
+  color: rgba(248, 248, 248, 0.1);
+  right: 2rem;
+  display: block;
+  width: 100%;
+  text-align: right;
+  z-index: 1;
+}
+#index #hardskills .cards-container {
+  margin-top: -10rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5rem;
+  gap: 2rem;
+}
+#index #hardskills .cards-container .card {
+  width: 400px;
+  height: 200px;
+  background: #1C1C1C;
+  padding: 1rem;
+  z-index: 2;
+  box-shadow: 5px 5px 15px #1C1C1C;
+}
+#index #hardskills .cards-container .card .type {
+  font-size: 0.8rem;
+}
+#index #hardskills .cards-container .card h4 {
+  font-weight: 600;
+  font-size: 24px;
+  color: #fff;
+}
+#index #hardskills .cards-container .card .description {
+  color: rgba(248, 248, 248, 0.7);
+  font-weight: 300;
+}
+#index #hardskills .cards-container .frontend {
+  border-top: 2px solid #D00D53;
+}
+#index #hardskills .cards-container .frontend .type {
+  color: #D00D53;
+  line-height: 0.8rem;
+}
+#index #hardskills .cards-container .industrial {
+  border-top: 2px solid #AA78E9;
+}
+#index #hardskills .cards-container .industrial .type {
+  color: #AA78E9;
+  line-height: 0.8rem;
+}
+#index #hardskills .cards-container .general {
+  border-top: 2px solid #08FDD8;
+}
+#index #hardskills .cards-container .general .type {
+  color: #08FDD8;
+  line-height: 0.8rem;
+}
+#index #softskills:before {
+  color: rgba(255, 255, 255, 0.15);
+  font-family: "La Belle Aurore", cursive;
+  position: relative;
+  font-weight: 500;
+  font-size: 1.2rem;
+  content: "<section>";
+  margin-left: 1rem;
+}
+#index #softskills:after {
+  color: rgba(255, 255, 255, 0.15);
+  font-family: "La Belle Aurore", cursive;
+  position: relative;
+  font-weight: 500;
+  font-size: 1.2rem;
+  content: "</section>";
+  margin-left: 1rem;
+}
+#index #softskills .backtext {
+  font-size: 10rem;
+  position: relative;
+  font-weight: 900;
+  color: rgba(248, 248, 248, 0.1);
+  right: 2rem;
+  display: block;
+  width: 100%;
+  text-align: right;
+  z-index: 1;
+}
+#index #softskills .cards-container {
+  margin-top: -10rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5rem;
+  gap: 2rem;
+}
+#index #softskills .cards-container .card {
+  width: 400px;
+  height: 200px;
+  background: #1C1C1C;
+  padding: 1rem;
+  z-index: 2;
+  border-radius: 5%;
+  border-top: 2px solid #0DD05B;
+  box-shadow: 5px 5px 15px #1C1C1C;
+}
+#index #softskills .cards-container .card h4 {
+  font-weight: 600;
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+}
+#index #softskills .cards-container .card .description {
+  color: rgba(248, 248, 248, 0.7);
+  font-weight: 300;
+  text-align: center;
+}
+
+@media (max-width: 767.98px) {
+  main {
+    margin-left: 0px !important;
+    margin-bottom: 50px;
+  }
+  .pad-container {
+    max-width: 100%;
+  }
+  #hero {
+    padding: 0 !important;
+  }
+  #hero .left {
+    width: 60% !important;
+  }
+  #hero .left h1 {
+    font-size: 1.8rem !important;
+  }
+  #hero .left p {
+    font-size: 14px !important;
+  }
+}/*# sourceMappingURL=main.css.map */

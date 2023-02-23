@@ -1,0 +1,13 @@
+body::-webkit-scrollbar {
+   width: 0.35rem;
+   height: 0.35rem;
+
+}
+
+body::-webkit-scrollbar-track {
+   background: $clr-terciary-light;
+}
+
+body::-webkit-scrollbar-thumb {
+   background: rgba($clr-accent,0.3);
+}

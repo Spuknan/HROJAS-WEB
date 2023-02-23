@@ -1,0 +1,63 @@
+@mixin sketch {
+   color: rgba(255, 255, 255, 0.15);
+   font-family: "La Belle Aurore", cursive;
+   position: relative;
+   font-weight: 500;
+   font-size: 1.2rem;
+}
+
+
+@media (min-width: 1px) {
+   .sk {
+   
+      &-h1 {
+         margin: -1rem;
+   
+         &:before {
+            @include sketch;
+            left: -2rem;
+            top: 0.5rem;
+            content: "<h1>";
+         }
+   
+         &:after {
+            @include sketch;
+            left: -2rem;
+            top: -0.5rem;
+            content: "</h1>";
+         }
+      }
+   
+      &-h2 {
+         &:before {
+            @include sketch;
+            left: -1rem;
+            content: "<h2>";
+         }
+   
+         &:after {
+            @include sketch;
+            right: -1rem;
+            content: "</h2>";
+         }
+      }
+   
+      &-p {
+         margin: -1rem;
+   
+         &:before {
+            @include sketch;
+            left: -2rem;
+            top: 0.8rem;
+            content: "<p>";
+         }
+   
+         &:after {
+            @include sketch;
+            left: -2rem;
+            top: -0.5rem;
+            content: "</p>";
+         }
+      }
+   }
+}
